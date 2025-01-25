@@ -5,44 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITProfit test task</title>
 </head>
-<body>
-  <div class="container">
-    <h1>Связаться с нами</h1>
+<body class="flex">
+  <div class="container flex">
+    <div class='form-container flex'>
       <form id="feedbackForm" class="feedback-form" novalidate>
+        <h1>Связаться с нами</h1>
         <div class="form-group">
-          <label for="name">Имя</label>
-          <input type="text" id="name" class="input" name="name" minlength="2" maxlength="40" placeholder="Михаил" pattern="[A-Za-zА-Яа-яЁё\-\s]+" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" required>
-          <span class="error-message" id="nameError"></span>
+          <input type="text" id="name" class="input" name="name" minlength="2" maxlength="40" placeholder="Имя  " pattern="[A-Za-zА-Яа-яЁё\-\s]+" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" required>
+          <span class="error-message flex" id="nameError"></span>
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" class="input" name="email" placeholder="mikhail@mail.ru" required>
-          <span class="error-message" id="emailError"></span>
+          <input type="email" id="email" class="input" name="email" placeholder="Email" required>
+          <span class="error-message flex" id="emailError"></span>
         </div>
         <div class="form-group">
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" class="input" name="phone" placeholder="+375" required>
-          <span class="error-message" id="phoneError"></span>
+          <input type="tel" id="phone" class="input" name="phone" placeholder="Номер телефона" required>
+          <span class="error-message flex" id="phoneError"></span>
       	</div>
         <div class="form-group">
-          <label for="message">Чем мы можем помочь?</label>
-          <textarea id="message" class="message input" name="message" minlength="5" required placeholder="Расскажите нам подробнее о вашей проблеме."></textarea>
-          <span class="error-message" id="messageError"></span>
+          <label for="message" class='flex'>Чем мы можем помочь?</label>
+          <textarea id="message" class="message input" name="message" minlength="5" required placeholder="Расскажите о вашей проблеме."></textarea>
+          <span class="error-message flex" id="messageError"></span>
         </div>
         <button type="submit" class="submit-btn">Связаться с нами</button>
       </form>
-			<div id="formMessage" class="form-message"></div>
     </div>
-		<div class="modal-container">
-			<button class="open-modal-btn">Открыть модальное окно</button>
-			<div class="modal-overlay">
+    <div class='modal-container flex'>
+      <div class='button-container'></div>
+      <button class="open-modal-btn">Открыть модальное окно</button>
+      <div id="formMessage" class="form-message"></div> 
+			<div class="modal-overlay flex">
 				<div class="modal-content">
 					<button class="close-modal-btn">&times;</button>
-					<h2>Модальное окно</h2>
-					<p class="modal-text">«Неудача — это просто возможность начать снова, но уже более мудро.»</p>
-					<p>©Бенджамин Франклин</p>
+          <div class='modal-text-container flex'>
+            <h2 class='modal-title flex'>Модальное окно</h2>
+            <p class="modal-text">«Неудача — это просто возможность начать снова, но уже более мудро.»</p>
+            <p class='modal-text'>©Бенджамин Франклин</p>
+          </div>
 				</div>
 			</div>
-		</div>
+    </div>
 </body>
 </html>
